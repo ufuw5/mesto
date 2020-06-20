@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Mesto</title>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <img src="./images/logo.svg" alt="Логотип" class="header__logo">
+    </header>
+
+    <main class="content">
+      <section class="lead">
+        <figure class="profile">
+          <img src="./images/avatar.jpg" alt="Портрет" class="profile__avatar">
+          <figcaption class="profile__info">
+            <h1 class="profile__title">Жак-Ив Кусто</h1>
+            <p class="profile__subtitle">Исследователь океана</p>
+            <button class="profile__edit-button translucence"></button>
+          </figcaption>
+        </figure>
+        <button class="add-button translucence"></button>
+      </section>
+      <section class="cards">
+        <article class="card">
+          <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="card__image">
+          <h3 class="card__title">Карачаевск</h3>
+          <button class="card__like-button translucence"></button>
+        </article>
+        <article class="card">
+          <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="card__image">
+          <h3 class="card__title">Гора Эльбрус</h3>
+          <button class="card__like-button translucence"></button>
+        </article>
+        <article class="card">
+          <img src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="card__image">
+          <h3 class="card__title">Домбай</h3>
+          <button class="card__like-button translucence"></button>
+        </article>
+        <article class="card">
+          <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="card__image">
+          <h3 class="card__title">Гора Эльбрус</h3>
+          <button class="card__like-button translucence"></button>
+        </article>
+        <article class="card">
+          <img src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="card__image">
+          <h3 class="card__title">Домбай</h3>
+          <button class="card__like-button translucence"></button>
+        </article>
+        <article class="card">
+          <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкесия" class="card__image">
+          <h3 class="card__title">Карачаево-Черкесия</h3>
+          <button class="card__like-button translucence"></button>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+    </footer>
+
+    <section class="popup">
+      <button class="popup__close-button translucence"></button>
+      <div class="popup__edit-form">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <input type="text" placeholder="Имя" class="popup__name">
+        <input type="text" placeholder="Характеристика" class="popup__description">
+        <button class="popup__save-button translucence">Сохранить</button>
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript" src="./scripts/index.js"></script>
+</body>
+
+</html>

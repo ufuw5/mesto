@@ -1,0 +1,17 @@
+@import url(./__image/card__image.css);
+@import url(./__like-button/card__like-button.css);
+@import url(./__title/card__title.css);
+
+
+.card {
+  background-color: #fff;
+  color: #000;
+  min-width: 282px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-areas:
+    "image image"
+    "title button";
+  align-items: center;
+}

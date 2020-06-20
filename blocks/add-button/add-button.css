@@ -1,0 +1,19 @@
+.add-button {
+  background-image: url(../../images/icon_plus.svg);
+  background-size: 22px;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 23px 73px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  object-fit: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .add-button {
+    background-size: 16px;
+    padding: 17px 49.5%;
+  }
+}
