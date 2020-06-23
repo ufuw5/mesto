@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   .add-button {
     background-size: 16px;
     padding: 17px 49.5%;

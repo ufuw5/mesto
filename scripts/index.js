@@ -8,19 +8,21 @@ let titleProfile = document.querySelector('.profile__title');
 let subtitleProfile = document.querySelector('.profile__subtitle');
 
 function openPopup() {
-  popup.classList.add('popup_opened');
   inputName.value = titleProfile.textContent;
   inputDescription.value = subtitleProfile.textContent;
+  popup.classList.add('popup_opened');
+  popup.classList.remove('popup_closed');
+}
+
+function close() {
+  popup.classList.add('popup_closed');
+  popup.classList.remove('popup_opened');
 }
 
 function save() {
   titleProfile.textContent = inputName.value;
   subtitleProfile.textContent = inputDescription.value;
   close();
-}
-
-function close() {
-  popup.classList.remove('popup_opened');
 }
 
 editButton.addEventListener('click', openPopup);

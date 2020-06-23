@@ -5,6 +5,8 @@
 @import url(./__name/popup__name.css);
 @import url(./__save-button/popup__save-button.css);
 @import url(./__title/popup__title.css);
+@import url(./_closed/popup_closed.css);
+@import url(./_opened/popup_opened.css);
 
 
 .popup {
@@ -12,7 +14,6 @@
   left: 0; right: 0;
   top: 0; bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
