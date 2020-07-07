@@ -1,4 +1,4 @@
-.popup__description {
+.add-card-popup__link {
   width: 83.25%;
   margin-top: 30px;
   font-style: normal;
@@ -10,4 +10,11 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+@media screen and (max-width: 425px) {
+  .add-card-popup__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }

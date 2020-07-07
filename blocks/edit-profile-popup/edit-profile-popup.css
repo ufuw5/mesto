@@ -1,0 +1,19 @@
+@import url(./__description/edit-profile-popup__description.css);
+@import url(./__name/edit-profile-popup__name.css);
+@import url(./__submit-button/edit-profile-popup__submit-button.css);
+@import url(./__title/edit-profile-popup__title.css);
+
+
+.edit-profile-popup {
+  background-color: #fff;
+  color: #000;
+  min-width: 240px;
+  max-width: 430px;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+}

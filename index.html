@@ -10,73 +10,77 @@
 
 <body>
   <div class="page">
+
     <header class="header">
       <img src="./images/logo.svg" alt="Логотип" class="header__logo">
     </header>
 
     <main class="content">
+
       <section class="lead">
         <figure class="profile">
           <img src="./images/avatar.jpg" alt="Портрет" class="profile__avatar">
           <figcaption class="profile__info">
             <h1 class="profile__title">Жак-Ив Кусто</h1>
             <p class="profile__subtitle">Исследователь океана</p>
-            <button class="profile__edit-button translucence"></button>
+            <button class="profile__edit-button link-translucence"></button>
           </figcaption>
         </figure>
-        <button class="add-button translucence"></button>
+        <button class="add-button link-translucence"></button>
       </section>
+
       <section class="cards">
-        <ul class="cards__list">
-          <li class="card">
-            <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="card__image">
-            <h3 class="card__title">Карачаевск</h3>
-            <button class="card__like-button translucence"></button>
-          </li>
-          <li class="card">
-            <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="card__image">
-            <h3 class="card__title">Гора Эльбрус</h3>
-            <button class="card__like-button translucence"></button>
-          </li>
-          <li class="card">
-            <img src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="card__image">
-            <h3 class="card__title">Домбай</h3>
-            <button class="card__like-button translucence"></button>
-          </li>
-          <li class="card">
-            <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="card__image">
-            <h3 class="card__title">Гора Эльбрус</h3>
-            <button class="card__like-button translucence"></button>
-          </li>
-          <li class="card">
-            <img src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="card__image">
-            <h3 class="card__title">Домбай</h3>
-            <button class="card__like-button translucence"></button>
-          </li>
-          <li class="card">
-            <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкесия" class="card__image">
-            <h3 class="card__title">Карачаево-Черкесия</h3>
-            <button class="card__like-button translucence"></button>
-          </li>
-        </ul>
+        <ul class="cards__list"></ul>
       </section>
+
     </main>
 
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
 
-    <section class="popup popup_closed">
-      <button class="popup__close-button translucence"></button>
-      <div class="popup__edit-form">
-        <h3 class="popup__title">Редактировать профиль</h3>
-        <input type="text" placeholder="Имя" class="popup__name">
-        <input type="text" placeholder="Характеристика" class="popup__description">
-        <button class="popup__save-button translucence">Сохранить</button>
+    <section class="popup popup_transparency-norm popup_closed">
+      <div class="edit-profile-popup">
+        <button class="popup__close-button link-translucence"></button>
+        <h3 class="edit-profile-popup__title">Редактировать профиль</h3>
+        <input type="text" placeholder="Имя" class="edit-profile-popup__name">
+        <input type="text" placeholder="Характеристика" class="edit-profile-popup__description">
+        <button class="edit-profile-popup__submit-button link-translucence">Сохранить</button>
       </div>
     </section>
+
+    <section class="popup popup_transparency-norm popup_closed">
+      <div class="add-card-popup">
+        <button class="popup__close-button link-translucence"></button>
+        <h3 class="add-card-popup__title">Новое место</h3>
+        <input type="text" placeholder="Название" class="add-card-popup__name">
+        <input type="text" placeholder="Ссылка на картинку" class="add-card-popup__link">
+        <button class="add-card-popup__submit-button link-translucence">Создать</button>
+      </div>
+    </section>
+
+    <section class="popup popup_transparency-hard popup_closed">
+      <figure class="image-popup">
+        <button class="popup__close-button link-translucence"></button>
+        <img src="" alt="" class="image-popup__image">
+        <figcaption class="image-popup__title"></figcaption>
+      </figure>
+    </section>
+
   </div>
-  <script type="text/javascript" src="./scripts/index.js"></script>
+
+  <template id="card">
+    <li class="card">
+      <div class="card__container">
+        <img src="" alt="" class="card__image">
+        <button class="card__remove-button link-translucence"></button>
+        <h3 class="card__title"></h3>
+        <button class="card__like-button link-translucence"></button>
+      </div>
+    </li>
+  </template>
+
+  <script src="./scripts/index.js"></script>
 </body>
 
 </html>

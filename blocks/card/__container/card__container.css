@@ -1,0 +1,14 @@
+.card__container {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: 1fr max-content;
+  grid-template-areas:
+    "image image"
+    "title button";
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

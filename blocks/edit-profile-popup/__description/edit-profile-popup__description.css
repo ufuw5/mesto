@@ -1,6 +1,6 @@
-.popup__name {
+.edit-profile-popup__description {
   width: 83.25%;
-  margin-top: 54px;
+  margin-top: 30px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -10,4 +10,11 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+@media screen and (max-width: 425px) {
+  .edit-profile-popup__description {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }

@@ -1,7 +1,7 @@
-.translucence {
+.link-translucence {
   transition: opacity 0.3s ease-in-out;
 }
 
-.translucence:hover {
+.link-translucence:hover {
   opacity: 0.6;
 }

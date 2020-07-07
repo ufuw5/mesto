@@ -1,4 +1,4 @@
-.popup__save-button {
+.add-card-popup__submit-button {
   width: 83.25%;
   margin: 48px 0 36.5px;
   padding: 16px 0;
@@ -11,4 +11,11 @@
   border: none;
   border-radius: 2px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .add-card-popup__submit-button {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
