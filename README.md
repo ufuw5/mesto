@@ -1,4 +1,4 @@
-# Проект 4: Место
+# Проект 6: Место
 
 ### Обзор
 
@@ -11,4 +11,4 @@
 
 **Figma**
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
+* [Ссылка на макет в Figma](https://www.figma.com/file/XNaGNEZD5NEjeyJzAT4gMb/JavaScript.-Sprint-6)
