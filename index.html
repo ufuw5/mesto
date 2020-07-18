@@ -40,22 +40,30 @@
     </footer>
 
     <section class="popup popup_transparency-norm popup_closed">
-      <form action="#" class="edit-profile-popup">
+      <form action="#" name="editProfile" class="form" novalidate>
         <button type="reset" class="popup__close-button link-translucence"></button>
-        <label class="edit-profile-popup__title">Редактировать профиль</label>
-        <input type="text" placeholder="Имя" name="profile-name" class="edit-profile-popup__name">
-        <input type="text" placeholder="Характеристика" name="profile-description" class="edit-profile-popup__description">
-        <button type="submit"class="edit-profile-popup__submit-button link-translucence">Сохранить</button>
+        <label class="form__label">Редактировать профиль</label>
+        <input type="text" placeholder="Имя" name="editProfileName" id="profile-name-input" class="form__input"
+          minlength="2" maxlength="40" required>
+        <span id="profile-name-input-error" class="form__input-error"></span>
+        <input type="text" placeholder="Характеристика" name="editProfileDescription" id="profile-description-input"
+          class="form__input" minlength="2" maxlength="200" required>
+        <span id="profile-description-input-error" class="form__input-error"></span>
+        <button type="submit" class="form__submit form__submit_nonactive link-translucence">Сохранить</button>
       </form>
     </section>
 
     <section class="popup popup_transparency-norm popup_closed">
-      <form action="#" class="add-card-popup">
+      <form action="#" name="addCard" class="form" novalidate>
         <button type="reset" class="popup__close-button link-translucence"></button>
-        <label class="add-card-popup__title">Новое место</label>
-        <input type="text" placeholder="Название" name="card-name" class="add-card-popup__name">
-        <input type="url" placeholder="Ссылка на картинку" name="card-link" class="add-card-popup__link">
-        <button type="submit" class="add-card-popup__submit-button link-translucence">Создать</button>
+        <label class="form__label">Новое место</label>
+        <input type="text" placeholder="Название" name="addCardName" id="card-name-input" class="form__input"
+          minlength="1" maxlength="30" required>
+        <span id="card-name-input-error" class="form__input-error"></span>
+        <input type="url" placeholder="Ссылка на картинку" name="addCardLink" id="card-link-input" class="form__input"
+          required>
+        <span id="card-link-input-error" class="form__input-error"></span>
+        <button type="submit" class="form__submit form__submit_nonactive link-translucence">Создать</button>
       </form>
     </section>
 
@@ -83,6 +91,7 @@
   </template>
 
   <script src="./scripts/data.js"></script>
+  <script src="./scripts/validate.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 

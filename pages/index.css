@@ -1,12 +1,11 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts/inter/inter.css);
 @import url(../blocks/add-button/add-button.css);
-@import url(../blocks/add-card-popup/add-card-popup.css);
 @import url(../blocks/card/card.css);
 @import url(../blocks/cards/cards.css);
 @import url(../blocks/content/content.css);
-@import url(../blocks/edit-profile-popup/edit-profile-popup.css);
 @import url(../blocks/footer/footer.css);
+@import url(../blocks/form/form.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/image-popup/image-popup.css);
 @import url(../blocks/lead/lead.css);

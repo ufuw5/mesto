@@ -1,4 +1,4 @@
-.add-card-popup__link {
+.form__input {
   width: 83.25%;
   margin-top: 30px;
   font-style: normal;
@@ -13,7 +13,7 @@
 }
 
 @media screen and (max-width: 425px) {
-  .add-card-popup__link {
+  .form__input {
     font-size: 12px;
     line-height: 15px;
   }

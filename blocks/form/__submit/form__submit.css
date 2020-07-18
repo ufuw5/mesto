@@ -1,20 +1,19 @@
-.add-card-popup__submit-button {
+.form__submit {
   width: 83.25%;
   margin: 48px 0 36.5px;
   padding: 16px 0;
-  background-color: #000;
-  color: #fff;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
   border: none;
+  box-sizing: border-box;
   border-radius: 2px;
   cursor: pointer;
 }
 
 @media screen and (max-width: 425px) {
-  .add-card-popup__submit-button {
+  .form__submit {
     font-size: 14px;
     line-height: 17px;
   }
