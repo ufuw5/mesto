@@ -13,7 +13,7 @@ const config = {
   inactiveButtonClass: 'form__submit_nonactive',
   activeButtonClass: 'form__submit_active',
   inputErrorClass: 'form__input_mod-error'
-}
+};
 
 
 function createCard(title, imgLink) {
@@ -58,7 +58,7 @@ function initForm(form) {
   const inputList = Array.from(form.querySelectorAll(config.inputSelector));
   const buttonElement = form.querySelector(config.submitButtonSelector);
   inputList.forEach(inputElement => {
-    checkInputValidity(config, form, inputElement);
+    inputElement.value === '' ? hideInputError(config, form, inputElement) : checkInputValidity(config, form, inputElement);
     toggleButtonState(config, inputList, buttonElement);
   });
   return form;
