@@ -39,7 +39,7 @@
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
 
-    <section class="popup popup_transparency-norm popup_closed">
+    <section id="editProfile" class="popup popup_transparency-norm popup_closed">
       <form action="#" name="editProfile" class="form" novalidate>
         <button type="reset" class="popup__close-button link-translucence"></button>
         <label class="form__label">Редактировать профиль</label>
@@ -53,7 +53,7 @@
       </form>
     </section>
 
-    <section class="popup popup_transparency-norm popup_closed">
+    <section id="addCard" class="popup popup_transparency-norm popup_closed">
       <form action="#" name="addCard" class="form" novalidate>
         <button type="reset" class="popup__close-button link-translucence"></button>
         <label class="form__label">Новое место</label>
@@ -67,7 +67,7 @@
       </form>
     </section>
 
-    <section class="popup popup_transparency-hard popup_closed">
+    <section id="image-popup" class="popup popup_transparency-hard popup_closed">
       <figure class="image-popup">
         <button class="popup__close-button link-translucence"></button>
         <img src="" alt="" class="image-popup__image">
@@ -90,9 +90,7 @@
     </li>
   </template>
 
-  <script src="./scripts/data.js"></script>
-  <script src="./scripts/validate.js"></script>
-  <script src="./scripts/index.js"></script>
+  <script type="module" src="./scripts/index.js"></script>
 </body>
 
 </html>

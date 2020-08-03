@@ -1,4 +1,4 @@
-# Проект 6: Место
+# Проект 7: Место
 
 ### Обзор
 
@@ -8,7 +8,3 @@
 
 Работа выполнена с приминением HTML, CSS и JavaScript.
 
-
-**Figma**
-
-* [Ссылка на макет в Figma](https://www.figma.com/file/XNaGNEZD5NEjeyJzAT4gMb/JavaScript.-Sprint-6)
