@@ -1,52 +1,36 @@
 export { Card };
 
 class Card {
-  constructor({ ...config }, { ...data }) {
-    this._generateCard(config, data);
+  constructor(templateSelector, name, link) {
+    this._generateCard(templateSelector, name, link);
   }
 
-  _generateCard({ ...config }, { ...data }) {
-    this._cardElement = this._getTemplate(config);
-    const image = this._cardElement.querySelector(config.imageSelector);
-    const likeButton = this._cardElement.querySelector(config.likeButtonSelector);
-    const removeButton = this._cardElement.querySelector(config.removeButtonSelector);
-    this._cardElement.querySelector(config.titleSelector).textContent = data.name;
-    image.src = data.link;
-    image.alt = data.name;
-    this._setEventListeners(config, { image, likeButton, removeButton }, data);
+  _generateCard(templateSelector, name, link) {
+    this._cardElement = this._getTemplate(templateSelector);
+    const image = this._cardElement.querySelector('.card__image');
+    this._cardElement.querySelector('.card__title').textContent = name;
+    image.src = link;
+    image.alt = name;
+    this._setEventListeners();
   }
 
-  _getTemplate({ ...config }) {
-    return document.querySelector(config.templateSelector).content.querySelector(config.cardSelector).cloneNode(true);
+  _getTemplate(templateSelector) {
+    return document.querySelector(templateSelector).content.querySelector('.card').cloneNode(true);
   }
 
-  _setEventListeners({ ...config }, { ...buttons }, { ...data }) {
-    buttons.image.addEventListener('click', () => {
-      this._openPopup(config, data);
+  _setEventListeners() {
+    const likeButton = this._cardElement.querySelector('.card__like-button');
+    const removeButton = this._cardElement.querySelector('.card__remove-button');
+    likeButton.addEventListener('click', () => {
+      this._toggleCardLike(likeButton);
     });
-    buttons.likeButton.addEventListener('click', () => {
-      this._toggleCardLike(config, buttons.likeButton);
-    });
-    buttons.removeButton.addEventListener('click', () => {
-      this._removeCard(config);
+    removeButton.addEventListener('click', () => {
+      this._removeCard();
     });
   }
 
-  _openPopup({ ...config }, { ...data }) {
-    const popup = document.querySelector(config.popupSelector);
-    const image = popup.querySelector(config.popupImageSelector);
-    image.src = data.link;
-    image.alt = data.name;
-    popup.querySelector(config.popupTitleSelector).textContent = data.name;
-    config.openPopup(popup);
-  }
-
-  _closePopup({ ...config }) {
-    config.closePopup();
-  }
-
-  _toggleCardLike({ ...config }, likeButton) {
-    likeButton.classList.toggle(config.likeButtonSelectorActive);
+  _toggleCardLike(likeButton) {
+    likeButton.classList.toggle('card__like-button_active');
   }
 
   _removeCard() {
