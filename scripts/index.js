@@ -1,3 +1,4 @@
+export { togglePopup };
 import { initialCards } from './data.js';
 import { validationConfig } from './config.js';
 import { Card } from './Card.js';
@@ -9,6 +10,11 @@ const profileTitle = page.querySelector('.profile__title');
 const profileSubtitle = page.querySelector('.profile__subtitle');
 const formClasses = {};
 const cardTemplateSelector = '#card';
+
+function togglePopup(popupElement) {
+  const popup = popupElement.closest('.popup');
+  popup.classList.toggle('popup_opened');
+}
 
 function openEditProfile(form) {
   form.reset();
@@ -39,7 +45,7 @@ function openAddCard(form) {
 function submitAddCard(form) {
   const name = form.addCardName.value;
   const link = form.addCardLink.value;
-  cardList.append(new Card(cardTemplateSelector, name, link).getCard());
+  cardList.prepend(new Card(cardTemplateSelector, name, link).getCard());
   togglePopup(form);
 }
 
@@ -73,12 +79,6 @@ function formSubmitListener(evt) {
       submitAddCard(form);
     };
   };
-}
-
-function togglePopup(popupElement) {
-  const popup = popupElement.closest('.popup');
-  popup.classList.toggle('popup_closed');
-  popup.classList.toggle('popup_opened');
 }
 
 function initForm() {

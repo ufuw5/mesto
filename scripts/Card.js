@@ -1,4 +1,5 @@
 export { Card };
+import { togglePopup } from './index.js';
 
 class Card {
   constructor(templateSelector, name, link) {
@@ -13,8 +14,7 @@ class Card {
     image.src = this._link;
     image.alt = this._name;
     popup.querySelector('.image-popup__title').textContent = this._name;
-    popup.classList.toggle('popup_closed');
-    popup.classList.toggle('popup_opened');
+    togglePopup(popup);
   }
 
   _generateCard(templateSelector, name, link) {
