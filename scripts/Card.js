@@ -2,7 +2,19 @@ export { Card };
 
 class Card {
   constructor(templateSelector, name, link) {
+    this._name = name;
+    this._link = link;
     this._generateCard(templateSelector, name, link);
+  }
+
+  _openImagePopup() {
+    const popup = document.querySelector('#imagePopup');
+    const image = popup.querySelector('.image-popup__image');
+    image.src = this._link;
+    image.alt = this._name;
+    popup.querySelector('.image-popup__title').textContent = this._name;
+    popup.classList.toggle('popup_closed');
+    popup.classList.toggle('popup_opened');
   }
 
   _generateCard(templateSelector, name, link) {
@@ -21,11 +33,15 @@ class Card {
   _setEventListeners() {
     const likeButton = this._cardElement.querySelector('.card__like-button');
     const removeButton = this._cardElement.querySelector('.card__remove-button');
+    const image = this._cardElement.querySelector('.card__image');
     likeButton.addEventListener('click', () => {
       this._toggleCardLike(likeButton);
     });
     removeButton.addEventListener('click', () => {
       this._removeCard();
+    });
+    image.addEventListener('click', () => {
+      this._openImagePopup();
     });
   }
 
