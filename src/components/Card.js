@@ -1,28 +1,20 @@
 export { Card };
-import { togglePopup } from './index.js';
 
 class Card {
-  constructor(templateSelector, name, link) {
-    this._name = name;
-    this._link = link;
-    this._generateCard(templateSelector, name, link);
+  constructor({ data, handleCardClick }, templateSelector) {
+    this._name = data.name;
+    this._link = data.link;
+    this._handleCardClick = handleCardClick;
+    this._templateSelector = templateSelector;
+    this._generateCard();
   }
 
-  _openImagePopup() {
-    const popup = document.querySelector('#imagePopup');
-    const image = popup.querySelector('.image-popup__image');
+  _generateCard() {
+    this._cardElement = this._getTemplate(this._templateSelector);
+    const image = this._cardElement.querySelector('.card__image');
+    this._cardElement.querySelector('.card__title').textContent = this._name;
     image.src = this._link;
     image.alt = this._name;
-    popup.querySelector('.image-popup__title').textContent = this._name;
-    togglePopup(popup);
-  }
-
-  _generateCard(templateSelector, name, link) {
-    this._cardElement = this._getTemplate(templateSelector);
-    const image = this._cardElement.querySelector('.card__image');
-    this._cardElement.querySelector('.card__title').textContent = name;
-    image.src = link;
-    image.alt = name;
     this._setEventListeners();
   }
 
@@ -41,7 +33,7 @@ class Card {
       this._removeCard();
     });
     image.addEventListener('click', () => {
-      this._openImagePopup();
+      this._handleCardClick(this._name, this._link);
     });
   }
 

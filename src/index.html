@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./pages/index.css">
   <title>Mesto</title>
 </head>
 
@@ -39,7 +38,7 @@
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
 
-    <section id="editProfile" class="popup popup_transparency-norm">
+    <section id="editProfilePopup" class="popup popup_transparency-norm">
       <form action="#" name="editProfile" class="form" novalidate>
         <button type="reset" class="popup__close-button link-translucence"></button>
         <label class="form__label">Редактировать профиль</label>
@@ -53,7 +52,7 @@
       </form>
     </section>
 
-    <section id="addCard" class="popup popup_transparency-norm">
+    <section id="addCardPopup" class="popup popup_transparency-norm">
       <form action="#" name="addCard" class="form" novalidate>
         <button type="reset" class="popup__close-button link-translucence"></button>
         <label class="form__label">Новое место</label>
@@ -70,7 +69,7 @@
     <section id="imagePopup" class="popup popup_transparency-hard">
       <figure class="image-popup">
         <button class="popup__close-button link-translucence"></button>
-        <img src="" alt="" class="image-popup__image">
+        <img class="image-popup__image">
         <figcaption class="image-popup__title"></figcaption>
       </figure>
     </section>
@@ -81,7 +80,7 @@
     <li class="card">
       <div class="card__container">
         <div class="card__image-container">
-          <img src="" alt="" class="card__image">
+          <img class="card__image">
         </div>
         <button class="card__remove-button link-translucence"></button>
         <h3 class="card__title"></h3>
@@ -90,7 +89,6 @@
     </li>
   </template>
 
-  <script type="module" src="./scripts/index.js"></script>
 </body>
 
 </html>

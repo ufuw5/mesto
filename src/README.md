@@ -2,9 +2,9 @@
 
 ### Обзор
 
-Ссылка: [Mesto](https://ufuw5.github.io/mesto/index.html)
+Ссылка: [Mesto](https://ufuw5.github.io/mesto/dist/index.html)
 
 Проект является частью обучения в Яндекс.Практикуме и создан в качестве самостоятельной работы для проверки усвоения учебного материала.
 
-Работа выполнена с приминением HTML, CSS и JavaScript.
+Работа выполнена с приминением HTML, CSS, JavaScript и Webpack .
 
