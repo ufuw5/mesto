@@ -1,0 +1,8 @@
+.profile__avatar-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+  object-fit: cover;
+}

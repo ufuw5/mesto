@@ -20,9 +20,9 @@ class FormValidator {
   };
 
   _hasInvalidInput(inputList) {
-    return inputList.some((inputElement) => {
+    return inputList.length > 0 ? inputList.some((inputElement) => {
       return !inputElement.validity.valid;
-    });
+    }) : false;
   };
 
   _toggleButtonState({ ...config }, inputList, buttonElement) {
@@ -59,8 +59,8 @@ class FormValidator {
     const buttonElement = formElement.querySelector(config.submitButtonSelector);
     inputList.forEach(inputElement => {
       inputElement.value === '' ? this._hideInputError(config, formElement, inputElement) : this._checkInputValidity(config, formElement, inputElement);
-      this._toggleButtonState(config, inputList, buttonElement);
     });
+    this._toggleButtonState(config, inputList, buttonElement);
   };
 
   enableValidation() {

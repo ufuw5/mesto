@@ -1,0 +1,10 @@
+.card__like-score {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  grid-area: score;
+  margin: 3px 0 21px;
+  text-align: center;
+  align-self: start;
+}

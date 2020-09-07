@@ -9,6 +9,12 @@ class PopupWithImage extends Popup {
     image.src = link;
     image.alt = name;
     title.textContent = name;
+    super._setEventListeners();
     super.open();
+  }
+
+  close() {
+    super._removeEventListeners();
+    super.close();
   }
 }
