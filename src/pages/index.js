@@ -58,7 +58,11 @@ function getCard(item) {
       });
       deleteCardPopup.open();
     } : null,
-    handleToggleLike: (id, like) => like ? api.deleteLike(id) : api.setLike(id)
+    handleToggleLike: ({ id, like }, toggleLike) => {
+      (like ? api.deleteLike(id) : api.setLike(id))
+        .then(data => { toggleLike(data.likes.length); })
+        .catch(err => { console.log(err); });
+    }
   }, cardTemplateSelector).get();
 }
 
@@ -84,10 +88,11 @@ function initCardContainer(initialCards) {
   cardContainer.renderer();
 }
 
-api.getInitialCards()
-  .then(initialCards => { initCardContainer(initialCards); })
-  .catch(err => { console.log(err); });
-api.getUserInfo()
-  .then(info => { userInfo.setUserInfo(info) })
-  .catch(err => { console.log(err); });
-window.addEventListener('click', pageClickListener);
+Promise.all([
+  api.getUserInfo(),
+  api.getInitialCards()
+]).then(([info, initialCards]) => {
+  userInfo.setUserInfo(info);
+  initCardContainer(initialCards);
+  window.addEventListener('click', pageClickListener);
+}).catch(err => { console.log(err); });

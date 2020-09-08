@@ -34,7 +34,7 @@ class Card {
 
   _setEventListeners() {
     this._likeButton.addEventListener('click', () => {
-      this._handleToggleLike(this._id, this._like).then(data => this._toggleLike(data.likes.length));
+      this._handleToggleLike({ id: this._id, like: this._like }, this._toggleLike.bind(this));
     });
     this._removeButton.addEventListener('click', () => {
       this._handleRemove(this._id, this._remove.bind(this));
